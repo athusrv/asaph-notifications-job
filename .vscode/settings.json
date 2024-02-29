@@ -1,0 +1,38 @@
+{
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintArgs": [
+    "--disable",
+    "C0116",
+    "--disable",
+    "C0115",
+    "--disable",
+    "C0114",
+    "--disable",
+    "C0103",
+    "--disable",
+    "R0902",
+    "--disable",
+    "E0401",
+    "--ignore=venv,alembic,docker-compose.yml,poetry.lock,pyproject.toml"
+  ],
+  "pylint.args": [
+    "--disable",
+    "C0116",
+    "--disable",
+    "C0115",
+    "--disable",
+    "C0114",
+    "--disable",
+    "C0103",
+    "--disable",
+    "R0902",
+    "--disable",
+    "E0401",
+    "--ignore=venv,alembic,docker-compose.yml,poetry.lock,pyproject.toml"
+  ],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "python.formatting.provider": "none"
+}
