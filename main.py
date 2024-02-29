@@ -5,8 +5,10 @@ import requests
 
 
 def execute():
+    login_url = f"{os.environ['SERVICE_URL']}/auth/login"
+    print("logging in", login_url)
     response = requests.post(
-        f"{os.environ['SERVICE_URL']}/auth/login",
+        login_url,
         json={"user": os.environ["USERNAME"], "password": os.environ["PASSWORD"]},
     )
     if not response.ok:
@@ -15,6 +17,7 @@ def execute():
     data = response.json()
     token = data.pop("token")
 
+    print("sending notifications...")
     date = datetime.now().isoformat()
     response = requests.post(
         f"{os.environ['SERVICE_URL']}/notifications/weekly",
