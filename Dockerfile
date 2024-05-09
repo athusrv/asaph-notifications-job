@@ -8,4 +8,4 @@ RUN pip install poetry
 RUN poetry config virtualenvs.create false
 RUN poetry install --no-root
 
-CMD python main.py
+CMD python -m job
